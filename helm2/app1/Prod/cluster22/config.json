@@ -1,0 +1,10 @@
+{
+  "cluster" : {
+    "address" : "https://34.68.70.100",
+    "name" : "cluster22"
+  },
+  "releaseTag" : "1.15",
+  "envTag" : "Prod",
+  "replicas" : "1",
+  "serviceTag" : "helm"
+}

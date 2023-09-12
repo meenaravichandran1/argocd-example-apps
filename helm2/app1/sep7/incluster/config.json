@@ -1,0 +1,10 @@
+{
+  "cluster" : {
+    "address" : "https://kubernetes.default.svc",
+    "name" : "incluster"
+  },
+  "releaseTag" : "1.15",
+  "envTag" : "sep7",
+  "replicas" : "6",
+  "serviceTag" : "helm"
+}
