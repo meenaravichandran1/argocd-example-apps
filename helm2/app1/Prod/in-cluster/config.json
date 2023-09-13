@@ -1,5 +1,0 @@
-{
-  "envname": "Prod",
-  "replicas": "6",
-  "clust": "in-cluster"
-}
