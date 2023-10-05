@@ -5,6 +5,9 @@
   },
   "releaseTag" : "1.15",
   "envTag" : "Prod",
-  "replicas" : "5",
-  "serviceTag" : "helm"
+  "june" : "3",
+  "may" : "2",
+  "replicas" : "6",
+  "serviceTag" : "helm",
+  "april" : "1"
 }
