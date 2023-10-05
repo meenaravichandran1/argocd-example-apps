@@ -16,5 +16,7 @@
   "envTag" : "Prod",
   "june" : "3",
   "aprilll" : "8",
-  "serviceTag" : "helm"
+  "serviceTag" : "helm",
+  "garbage" : "yeah",
+  "sunday" : "woohoo"
 }
