@@ -6,7 +6,7 @@
   "releaseTag" : "1.15",
   "envTag" : "Prod",
   "june" : "3",
-  "may" : "2",
+  "may" : "1",
   "replicas" : "2",
   "serviceTag" : "helm",
   "april" : "7"
