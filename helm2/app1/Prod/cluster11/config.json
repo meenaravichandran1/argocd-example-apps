@@ -5,18 +5,18 @@
   },
   "releaseTag" : "1.15",
   "aprill" : "8",
-  "may" : "2",
+  "may" : "1",
   "replicas" : "2",
   "mayy" : "2",
   "juneee" : "3",
   "mayyy" : "2",
+  "garbage" : "yeah",
   "juneeeee" : "3",
   "april" : "7",
   "junee" : "3",
+  "sunday" : "woohoo",
   "envTag" : "Prod",
   "june" : "3",
   "aprilll" : "8",
-  "serviceTag" : "helm",
-  "garbage" : "yeah",
-  "sunday" : "woohoo"
+  "serviceTag" : "helm"
 }
