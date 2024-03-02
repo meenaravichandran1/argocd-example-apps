@@ -1,0 +1,25 @@
+pipeline:
+  name: childd
+  identifier: childd
+  tags: {}
+  template:
+    templateRef: pipelinee
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: d
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+  projectIdentifier: Zendesk
+  orgIdentifier: default
