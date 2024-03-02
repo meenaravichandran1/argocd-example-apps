@@ -1,0 +1,28 @@
+template:
+  name: pipeline
+  identifier: pipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: testrohitgitops
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: as
+          identifier: as
+          tags: {}
+          template:
+            templateRef: stage
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
