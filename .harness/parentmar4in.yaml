@@ -31,8 +31,15 @@ pipeline:
                               serviceOverrideInputs: <+input>
                               infrastructureDefinitions: <+input>
                             service:
-                              serviceRef: <+input>
-                              serviceInputs: <+input>
+                              serviceRef: test
+                              serviceInputs:
+                                serviceDefinition:
+                                  type: Kubernetes
+                                  spec:
+                                    variables:
+                                      - name: hellop
+                                        type: String
+                                        value: "3"
           outputs:
             - name: cvb
               value: "12"
