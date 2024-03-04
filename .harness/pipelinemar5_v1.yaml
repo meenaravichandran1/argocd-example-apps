@@ -1,0 +1,28 @@
+template:
+  name: pipelinemar5
+  identifier: pipelinemar5
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: Zendesk
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: abc
+          identifier: abc
+          tags: {}
+          template:
+            templateRef: stagemar4
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
