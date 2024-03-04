@@ -1,0 +1,38 @@
+pipeline:
+  name: parentmar4
+  identifier: parentmar4
+  projectIdentifier: Zendesk
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ch
+        identifier: ch
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childmar4
+          project: Zendesk
+          inputs:
+            identifier: childmar4
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: abc
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: qwerty
+              value: "45"
