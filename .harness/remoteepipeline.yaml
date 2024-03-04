@@ -1,0 +1,9 @@
+pipeline:
+  name: remoteepipeline
+  identifier: remoteepipeline
+  tags: {}
+  template:
+    templateRef: remotee
+    versionLabel: v1
+  projectIdentifier: meenalocal
+  orgIdentifier: default
