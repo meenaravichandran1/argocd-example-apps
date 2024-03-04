@@ -35,4 +35,4 @@ pipeline:
                               serviceInputs: <+input>
           outputs:
             - name: qwerty
-              value: "45"
+              value: "456"
