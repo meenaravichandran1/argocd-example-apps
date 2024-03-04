@@ -27,9 +27,10 @@ pipeline:
                           artifacts:
                             primary:
                               primaryArtifactRef: artifact
+                              sources: ""
                           variables:
                             - name: releaseTag
                               type: String
-                              value: "5"
+                              value: "8"
   projectIdentifier: meenalocal
   orgIdentifier: default
