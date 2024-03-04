@@ -1,0 +1,28 @@
+template:
+  name: pipelinemar4in
+  identifier: pipelinemar4in
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: testrohitgitops
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: asd
+          identifier: asd
+          tags: {}
+          template:
+            templateRef: stagemar4in
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
