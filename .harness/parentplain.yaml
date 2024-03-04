@@ -1,0 +1,20 @@
+pipeline:
+  name: parentplain
+  identifier: parentplain
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: vv
+        identifier: vv
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childplain
+          project: meenalocal
+          inputs: {}
+          outputs:
+            - name: abc
+              value: "12"
