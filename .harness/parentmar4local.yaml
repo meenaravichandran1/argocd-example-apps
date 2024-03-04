@@ -1,0 +1,38 @@
+pipeline:
+  name: parentmar4local
+  identifier: parentmar4local
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cc
+        identifier: cc
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childmar4local
+          project: meenalocal
+          inputs:
+            identifier: childmar4local
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: qq
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: qwe
+              value: "12"
