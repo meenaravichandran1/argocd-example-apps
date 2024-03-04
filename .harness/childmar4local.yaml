@@ -31,6 +31,6 @@ pipeline:
                           variables:
                             - name: releaseTag
                               type: String
-                              value: "8"
+                              value: "9"
   projectIdentifier: meenalocal
   orgIdentifier: default
