@@ -1,0 +1,28 @@
+template:
+  name: pipelinemar4local
+  identifier: pipelinemar4local
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: qq
+          identifier: qq
+          tags: {}
+          template:
+            templateRef: stagemar4local
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
