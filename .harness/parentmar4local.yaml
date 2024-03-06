@@ -35,4 +35,4 @@ pipeline:
                               serviceInputs: <+input>
           outputs:
             - name: qwe
-              value: "12"
+              value: "12456"
