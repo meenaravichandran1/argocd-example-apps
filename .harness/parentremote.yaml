@@ -1,0 +1,38 @@
+pipeline:
+  name: parent-remote
+  identifier: parentremote
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: ll
+        identifier: ll
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: childinline
+          project: meenalocal
+          inputs:
+            identifier: childinline
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: qq
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: outp
+              value: "12"
