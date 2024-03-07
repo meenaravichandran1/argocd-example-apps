@@ -9,7 +9,7 @@ template:
   spec:
     stages:
       - stage:
-          name: qq
+          name: qqmm
           identifier: qq
           tags: {}
           template:
