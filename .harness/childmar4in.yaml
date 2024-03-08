@@ -19,7 +19,30 @@ pipeline:
                     serviceOverrideInputs: <+input>
                     infrastructureDefinitions: <+input>
                   service:
-                    serviceRef: <+input>
-                    serviceInputs: <+input>
+                    serviceRef: nginx
+                    serviceInputs:
+                      serviceDefinition:
+                        type: Kubernetes
+                        spec:
+                          artifacts:
+                            primary:
+                              sources:
+                                - identifier: nginx
+                                  type: Gcr
+                                  spec:
+                                    tag: "1.0"
+                          variables:
+                            - name: testVar
+                              type: String
+                              value: ""
+                            - name: test123
+                              type: String
+                              value: ""
+                            - name: testset
+                              type: String
+                              value: ""
+                            - name: datetime
+                              type: String
+                              value: ""
   projectIdentifier: testrohitgitops
   orgIdentifier: default
