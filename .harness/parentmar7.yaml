@@ -1,7 +1,9 @@
 pipeline:
   name: parentmar7
   identifier: parentmar7
-  tags: {}
+  tags:
+    asdfg: ""
+    sdfasfasf: ""
   template:
     templateRef: pipelinemar4local
     versionLabel: v1
