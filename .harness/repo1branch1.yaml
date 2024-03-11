@@ -5,7 +5,6 @@ pipeline:
   template:
     templateRef: repo2defaultbranch
     versionLabel: v1
-    gitBranch: master
     templateInputs:
       stages:
         - stage:
