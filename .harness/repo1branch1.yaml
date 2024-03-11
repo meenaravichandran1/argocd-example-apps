@@ -1,0 +1,24 @@
+pipeline:
+  name: repo1branch1
+  identifier: repo1branch1
+  tags: {}
+  template:
+    templateRef: repo2defaultbranch
+    versionLabel: v1
+    gitBranch: master
+    templateInputs:
+      stages:
+        - stage:
+            identifier: dadas
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+  projectIdentifier: meenalocal
+  orgIdentifier: default
