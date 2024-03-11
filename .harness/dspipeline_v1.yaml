@@ -1,0 +1,28 @@
+template:
+  name: dspipeline
+  identifier: dspipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: meena
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: ss
+          identifier: ss
+          tags: {}
+          template:
+            templateRef: dsstage
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
