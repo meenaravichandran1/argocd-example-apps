@@ -1,0 +1,38 @@
+pipeline:
+  name: dsparent
+  identifier: dsparent
+  projectIdentifier: meena
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: f
+        identifier: f
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: dschild
+          project: meena
+          inputs:
+            identifier: dschild
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: ss
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: abc
+              value: "5"
