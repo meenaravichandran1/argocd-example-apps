@@ -1,0 +1,36 @@
+pipeline:
+  name: repo1branch1parent
+  identifier: repo1branch1parent
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dwef
+        identifier: dwef
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: repo1branch1
+          project: meenalocal
+          inputs:
+            identifier: repo1branch1
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: dadas
+                      type: Deployment
+                      spec:
+                        environment:
+                          environmentRef: <+input>
+                          environmentInputs: <+input>
+                          serviceOverrideInputs: <+input>
+                          infrastructureDefinitions: <+input>
+                        service:
+                          serviceRef: <+input>
+                          serviceInputs: <+input>
+          outputs:
+            - name: sfdfsd
+              value: qeqerrwr
