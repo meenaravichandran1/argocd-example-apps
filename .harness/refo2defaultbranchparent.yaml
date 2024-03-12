@@ -1,0 +1,36 @@
+pipeline:
+  name: refo2defaultbranchparent
+  identifier: refo2defaultbranchparent
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: vv
+        identifier: vv
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: repo2defaultbranch
+          project: meenalocal
+          inputs:
+            identifier: repo2defaultbranch
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: dadas
+                      type: Deployment
+                      spec:
+                        environment:
+                          environmentRef: <+input>
+                          environmentInputs: <+input>
+                          serviceOverrideInputs: <+input>
+                          infrastructureDefinitions: <+input>
+                        service:
+                          serviceRef: <+input>
+                          serviceInputs: <+input>
+          outputs:
+            - name: nvb
+              value: "23"
