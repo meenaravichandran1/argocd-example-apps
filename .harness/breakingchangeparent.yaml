@@ -1,0 +1,38 @@
+pipeline:
+  name: breakingchangeparent
+  identifier: breakingchangeparent
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: dcxz
+        identifier: dcxz
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: breakingchangechild
+          project: meenalocal
+          inputs:
+            identifier: breakingchangechild
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: asd
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: sdaf
+              value: "123"
