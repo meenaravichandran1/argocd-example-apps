@@ -1,0 +1,28 @@
+template:
+  name: breakingchangepipeline
+  identifier: breakingchangepipeline
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: meenalocal
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: asd
+          identifier: asd
+          tags: {}
+          template:
+            templateRef: breakingchangestage
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
