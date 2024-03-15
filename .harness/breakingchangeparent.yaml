@@ -35,4 +35,4 @@ pipeline:
                               serviceInputs: <+input>
           outputs:
             - name: sdaf
-              value: "123"
+              value: 123abcde
