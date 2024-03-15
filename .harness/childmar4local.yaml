@@ -19,7 +19,6 @@ pipeline:
                     serviceOverrideInputs: <+input>
                     infrastructureDefinitions: <+input>
                   service:
-                    serviceRef: <+input>
-                    serviceInputs: <+input>
+                    serviceRef: serviceyaml
   projectIdentifier: meenalocal
   orgIdentifier: default
