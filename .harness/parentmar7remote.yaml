@@ -35,4 +35,4 @@ pipeline:
                               serviceInputs: <+input>
           outputs:
             - name: outpt
-              value: "56"
+              value: 56asd
