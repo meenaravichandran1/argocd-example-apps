@@ -1,0 +1,38 @@
+pipeline:
+  name: breakingchangeparentqa
+  identifier: breakingchangeparentqa
+  projectIdentifier: MeenaSyncStep
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: sd
+        identifier: sd
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: breakingchangechildqa
+          project: MeenaSyncStep
+          inputs:
+            identifier: breakingchangechildqa
+            template:
+              templateInputs:
+                stages:
+                  - stage:
+                      identifier: tes
+                      template:
+                        templateInputs:
+                          type: Deployment
+                          spec:
+                            environment:
+                              environmentRef: <+input>
+                              environmentInputs: <+input>
+                              serviceOverrideInputs: <+input>
+                              infrastructureDefinitions: <+input>
+                            service:
+                              serviceRef: <+input>
+                              serviceInputs: <+input>
+          outputs:
+            - name: safsaf
+              value: "123"
