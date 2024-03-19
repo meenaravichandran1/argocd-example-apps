@@ -1,0 +1,28 @@
+template:
+  name: breakingchangepipelineqa
+  identifier: breakingchangepipelineqa
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: MeenaSyncStep
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: tes
+          identifier: tes
+          tags: {}
+          template:
+            templateRef: breakingchangestageqa
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
