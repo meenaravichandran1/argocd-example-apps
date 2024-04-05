@@ -72,12 +72,8 @@ pipeline:
                   name: UpdateGitOpsApp_1
                   identifier: UpdateGitOpsApp_1
                   spec:
-                    targetRevision: 0.14.0
-                    helm:
-                      valueFiles: []
-                    kustomize:
-                      images: []
-                      replicas: []
+                    targetRevision: <+input>
+                    helm: <+input>
                     applicationName: fdasfa
                     agentId: lucas
                   timeout: 10m
