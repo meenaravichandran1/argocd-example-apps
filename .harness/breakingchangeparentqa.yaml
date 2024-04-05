@@ -67,16 +67,6 @@ pipeline:
                   identifier: fetchLinkedApps
                   timeout: 10m
                   spec: {}
-              - step:
-                  type: UpdateGitOpsApp
-                  name: UpdateGitOpsApp_1
-                  identifier: UpdateGitOpsApp_1
-                  spec:
-                    targetRevision: <+input>
-                    helm: <+input>
-                    applicationName: fdasfa
-                    agentId: lucas
-                  timeout: 10m
             rollbackSteps: []
           environment:
             environmentRef: test
