@@ -36,3 +36,58 @@ pipeline:
           outputs:
             - name: safsaf
               value: "123"
+    - stage:
+        name: fsdfds
+        identifier: fsdfds
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          gitOpsEnabled: true
+          service:
+            serviceRef: kustomizeapp
+          execution:
+            steps:
+              - step:
+                  type: GitOpsUpdateReleaseRepo
+                  name: Update Release Repo
+                  identifier: updateReleaseRepo
+                  timeout: 10m
+                  spec: {}
+              - step:
+                  type: MergePR
+                  name: Merge PR
+                  identifier: mergePR
+                  spec:
+                    deleteSourceBranch: true
+                  timeout: 10m
+              - step:
+                  type: GitOpsFetchLinkedApps
+                  name: Fetch Linked Apps
+                  identifier: fetchLinkedApps
+                  timeout: 10m
+                  spec: {}
+              - step:
+                  type: UpdateGitOpsApp
+                  name: UpdateGitOpsApp_1
+                  identifier: UpdateGitOpsApp_1
+                  spec:
+                    targetRevision: <+input>
+                    helm: <+input>
+                    applicationName: fdasfa
+                    agentId: lucas
+                  timeout: 10m
+            rollbackSteps: []
+          environment:
+            environmentRef: test
+            deployToAll: false
+            gitOpsClusters:
+              - identifier: testCluster
+                agentIdentifier: account.mirkobugbashbyo
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
