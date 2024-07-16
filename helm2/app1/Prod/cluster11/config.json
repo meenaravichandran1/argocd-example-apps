@@ -4,9 +4,11 @@
     "name" : "cluster11"
   },
   "releaseTag" : "1.15",
+  "emptySpaceRuntime" : "d",
   "aprill" : "8",
   "may" : "sdfd",
-  "replicas" : "3",
+  "singleSpaceRuntime" : "d",
+  "replicas" : "1",
   "mayy" : "2",
   "juneee" : "3",
   "mayyy" : "2",
@@ -16,8 +18,11 @@
   "april" : "dsfd",
   "junee" : "3",
   "sunday" : "woohoo",
+  "someValueFixed" : "qwe",
   "envTag" : "Prod",
   "june" : "3dfdsd",
   "aprilll" : "8",
-  "serviceTag" : "helm"
+  "serviceTag" : "helm",
+  "someValueRuntime" : "f",
+  "someValueExpression" : "some random value"
 }
